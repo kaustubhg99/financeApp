@@ -2,3 +2,11 @@
 .account{
     font-size: 0.65rem;
 }
+
+.fa-success{
+    color: #00d1b2;
+}
+
+.fa-danger{
+    color: #ff8099;
+}

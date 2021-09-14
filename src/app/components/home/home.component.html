@@ -1,4 +1,112 @@
 <app-header></app-header>
 <app-dwb-details></app-dwb-details>
 <app-transactions></app-transactions>
-<button class="button is-danger is-rounded addButton"> <span class="icon"><i class="fa fa-plus" aria-hidden="true"></i></span></button>
+<button class="button is-danger is-rounded addButton" (click)="openNewTransaction('open')"> <span class="icon"><i class="fa fa-plus" aria-hidden="true"></i></span></button>
+
+<div class="modal " id="transactionModal" [ngStyle]="transactionModalActive">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Add New Transaction</p>
+        <button class="delete" aria-label="close" (click)="openNewTransaction('close')"></button>
+      </header>
+      <section class="modal-card-body">
+        <!-- Content ... -->
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Account</label>
+          </div>
+          <div class="field-body">
+            <div class="field is-narrow">
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>Select from the list :</option>
+                    <option>HDFC</option>
+                    <option>DBS</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Category</label>
+          </div>
+          <div class="field-body">
+            <div class="field is-narrow">
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>Select from the list :</option>
+                    <option>Household</option>
+                    <option>Transportation</option>
+                    <option>Entertain</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Note</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input is-success" type="text" placeholder="Email" value="bulma">
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Amount</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <p class="control">
+                <input class="input is-success" type="number" placeholder="Email" value="00.00">
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="field is-horizontal is-small">
+          <div class="field-label is-normal">
+            <label class="label"></label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="file is-primary has-name">
+                <label class="file-label">
+                  <input class="file-input" type="file" name="resume">
+                  <span class="file-cta">
+                    <span class="file-icon">
+                      <i class="fa fa-upload"></i>
+                    </span>
+                    <span class="file-label">
+                      Select file
+                    </span>
+                  </span>
+            <span class="file-name">
+              Sample_fileName.jpeg
+            </span>
+          </label>
+        </div>
+            </div>
+          </div>
+        </div>
+  
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success">Save changes</button>
+        <button class="button" (click)="openNewTransaction('close')">Cancel</button>
+      </footer>
+    </div>
+  </div>

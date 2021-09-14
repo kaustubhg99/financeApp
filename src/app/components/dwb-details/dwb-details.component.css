@@ -1,0 +1,21 @@
+.card{
+    margin: 0.5rem;
+    border-radius: 0.7rem;
+    
+}
+.card-content{
+    padding: 0.5rem;
+}
+.box{
+    box-shadow: 0;
+    border: 0;
+    background-color: #23d160;
+    color: white;
+}
+.box.purple{
+    background-color: #943bde;
+}
+
+.box.red{
+    background-color: #ff944d;
+}
